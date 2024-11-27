@@ -1,17 +1,60 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+        // สร้างตัวละคร
+        Fighter fighter = new Fighter("Archer");
+        Mage mage = new Mage("Wizard");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        // สร้างอุปกรณ์เสริม
+        Boots boots = new Boots();
+        Ring ring = new Ring();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        // แสดงสถานะเริ่มต้น
+        System.out.println("********************************");
+        System.out.println("**** Character Status ****");
+        fighter.showStatus();
+        mage.showStatus();
+
+        // สวมอุปกรณ์
+        System.out.println("\n**** Equipping Accessories ****");
+        fighter.equipAccessory(boots);
+        mage.equipAccessory(ring);
+
+        // แสดงสถานะหลังสวมอุปกรณ์
+        System.out.println("\n**** Status After Equipping Accessories ****");
+        fighter.showStatus();
+        mage.showStatus();
+
+        // ตัวละครเลเวลอัพ
+        System.out.println("\n**** Leveling Up ****");
+        fighter.levelUp();
+        mage.levelUp();
+
+        // แสดงสถานะหลังเลเวลอัพ
+        System.out.println("\n***** Status After Level Up *****");
+        fighter.showStatus();
+        mage.showStatus();
+
+        // การโจมตี
+        System.out.println("\n**** Battle ****");
+        System.out.println("Fighter attacks Mage:");
+        fighter.fighterATK(mage);
+        mage.showStatus();
+
+        System.out.println("Mage attacks Fighter:");
+        mage.MageATK(fighter);
+        fighter.showStatus();
+
+        // ถอดอุปกรณ์
+        System.out.println("\n**** Removing Accessories ****");
+        fighter.deleteAccessory();
+        mage.deleteAccessory();
+
+        // แสดงสถานะหลังถอดอุปกรณ์
+        System.out.println("\n**** Status After Removing Accessories ****");
+        fighter.showStatus();
+        mage.showStatus();
+
+        System.out.println("\n***** Test attack ****");
+        fighter.fighterATK(fighter);
     }
 }
