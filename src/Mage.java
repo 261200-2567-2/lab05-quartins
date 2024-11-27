@@ -28,6 +28,8 @@ public class Mage implements Character {
         level++;
         maxHp += 10;
         maxMana += 10;
+        Hp += 10 ;
+        Mana += 10;
         runSpeed += 2;
         def += 5;
         damage += 5;
@@ -57,6 +59,8 @@ public class Mage implements Character {
         this.def -= accessories.getDefenseBoost();
         this.maxHp -= accessories.getHpBoost();
         this.maxMana -= accessories.getManaBoost();
+
+
         System.out.println(name + " removed " + accessories.getName());
         this.accessories = null;
     }
@@ -67,7 +71,7 @@ public class Mage implements Character {
             return;
         }
 
-        double attackDamage = this.damage + this.Mana * 0.1; // เพิ่มความเสียหายตาม Mana
+        double attackDamage = this.damage + this.Mana * 0.5; // เพิ่มความเสียหายตาม Mana
         System.out.println(name + " casts a spell and deals " + attackDamage + " damage!");
 
         if (opponent instanceof Fighter) {

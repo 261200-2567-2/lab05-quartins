@@ -28,7 +28,7 @@ public class Ring implements Accessories {
 
     @Override
     public double getManaBoost() {
-        return 10;
+        return 5;
     }
 
     @Override

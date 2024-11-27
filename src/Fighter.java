@@ -29,6 +29,8 @@ public class Fighter implements Character {
         level++;
         maxHp += 10;
         maxMana += 5;
+        Mana += 5;
+        Hp +=10 ;
         runSpeed += 2;
         def += 10;
         damage += 10;
@@ -75,10 +77,10 @@ public class Fighter implements Character {
         System.out.println(name + " attacks and deals " + attackDamage + " damage!");
         if (opponent instanceof Fighter) { //ตรวจสอบว่าเป็นobject ของ Fighter ไหม
             Fighter target = (Fighter) opponent; //ถ้าเป็นให้แปลงเป็น Fighterเพื่อเข้าถึงค่าตัวแปรและmethod
-            target.Hp -= attackDamage - target.def; //ลด Hp ของ target
-        } else if (opponent instanceof Mage) {
-            Mage target = (Mage) opponent;
-            target.Hp -= attackDamage - target.def;
+            target.Hp -= Math.max(0,attackDamage - target.def); //ลด Hp ของคู่ต่อสู้
+        } else if (opponent instanceof Mage) {//ถ้าเป็น object ของ mage
+            Mage target = (Mage) opponent; //ก็แปลงเป็น Mage
+            target.Hp -= Math.max(0,attackDamage - target.def); //ลดค่า Hp ของคู่ต่อสู้
         }
 
     }

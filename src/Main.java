@@ -8,6 +8,9 @@ public class Main {
         Boots boots = new Boots();
         Ring ring = new Ring();
 
+        Boots boots1 = new Boots();
+        Ring ring1 = new Ring();
+
         // แสดงสถานะเริ่มต้น
         System.out.println("********************************");
         System.out.println("**** Character Status ****");
@@ -17,6 +20,9 @@ public class Main {
         // สวมอุปกรณ์
         System.out.println("\n**** Equipping Accessories ****");
         fighter.equipAccessory(boots);
+        fighter.equipAccessory(ring1);
+        fighter.deleteAccessory();
+        fighter.equipAccessory(ring);
         mage.equipAccessory(ring);
 
 
