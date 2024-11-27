@@ -31,7 +31,7 @@ public class Boots implements Accessories {
         return 0;
     }
 
-    @Override
+
     public void levelUp() {
         level++;
     }
