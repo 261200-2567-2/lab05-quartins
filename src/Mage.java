@@ -72,7 +72,7 @@ public class Mage implements Character {
 
         if (opponent instanceof Fighter) {
             Fighter target = (Fighter) opponent;
-            target.Hp -= Math.max(0, attackDamage - target.def); // ลด HP ตามความเสียหาย
+            target.Hp -= Math.max(0, attackDamage - target.def); //ลด HP ตามความเสียหาย
         } else if (opponent instanceof Mage) {
             Mage target = (Mage) opponent;
             target.Hp -= Math.max(0, attackDamage - target.def);

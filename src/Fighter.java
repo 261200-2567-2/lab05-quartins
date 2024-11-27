@@ -22,7 +22,7 @@ public class Fighter implements Character {
         System.out.println("HP : " + Hp + "/" + maxHp);
         System.out.println("Mana : " + Mana + "/" + maxMana);
         System.out.println("Run Speed : " + runSpeed);
-        System.out.println("Def : " + def + "    Damage : " + damage);
+        System.out.println("Def : " + def + "   Damage : " + damage);
     }
 
     public void levelUp() {

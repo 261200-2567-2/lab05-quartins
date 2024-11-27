@@ -1,4 +1,5 @@
 public interface Accessories {
+
     String getName(); // เช่น Boots หรือ Ring
     double getDamageBoost();
     double getDefenseBoost();

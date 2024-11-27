@@ -33,6 +33,7 @@ public class Boots implements Accessories {
 
 
     public void levelUp() {
+        getSpeedBoost();
         level++;
     }
 }

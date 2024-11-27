@@ -19,6 +19,7 @@ public class Main {
         fighter.equipAccessory(boots);
         mage.equipAccessory(ring);
 
+
         // แสดงสถานะหลังสวมอุปกรณ์
         System.out.println("\n**** Status After Equipping Accessories ****");
         fighter.showStatus();
@@ -28,6 +29,8 @@ public class Main {
         System.out.println("\n**** Leveling Up ****");
         fighter.levelUp();
         mage.levelUp();
+
+        ring.levelUp();
 
         // แสดงสถานะหลังเลเวลอัพ
         System.out.println("\n***** Status After Level Up *****");

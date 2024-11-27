@@ -33,6 +33,7 @@ public class Ring implements Accessories {
 
     @Override
     public void levelUp() {
+        getManaBoost();
         level++;
     }
 }
