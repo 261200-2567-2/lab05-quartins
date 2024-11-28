@@ -8,7 +8,6 @@ public class Lab05 {
         Boots boots = new Boots();
         Ring ring = new Ring();
 
-        Boots boots1 = new Boots();
         Ring ring1 = new Ring();
 
         // แสดงสถานะเริ่มต้น
@@ -19,10 +18,10 @@ public class Lab05 {
 
         // สวมอุปกรณ์
         System.out.println("\n**** Equipping Accessories ****");
-        fighter.equipAccessory(boots);
         fighter.equipAccessory(ring1);
+        fighter.equipAccessory(boots);
         fighter.deleteAccessory();
-        fighter.equipAccessory(ring);
+        fighter.equipAccessory(boots);
         mage.equipAccessory(ring);
 
 
@@ -65,5 +64,6 @@ public class Lab05 {
 
         System.out.println("\n***** Test attack ****");
         fighter.fighterATK(fighter);
+        mage.MageATK(mage);
     }
 }
